@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Uas</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+
+        background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_640.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: transparent;
+        background-clip: text;
+      }
+
+        nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+
+        nav img {
+            border-image-width: 50px;
+            height: 155px;
+            width: 337px;
+            transform: scale(4);
+        }
+
+        main {
+        margin: auto;
+        }
+
+        .chart-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 20px;
+            
+        }
+        .plot-container {
+        width: 33%;
+        display: inline-block;
+        margin: 0px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--tag Header -->
+    <header>
+        <h1> Welcome To The Website Natulianatri Sistem Informasi Grafika Komputer & Pegolahan Citra</h1>
+    </header>
+
+    <!--tag Navigasi -->
+    <nav>
+        <img src="https://www.visitkorea.or.id/akudankorea/uploads/unique_destination/06bc75720f554b2f1c5d747675fa0004a.png">
+    </nav>
+
+    <!--tag Main -->
+    <main>
+        <div class="chart-container">
+        <div class="plot-container" id="plot1"></div>
+        <div class="plot-container" id="plot2"></div>
+        <div class="plot-container" id="plot3"></div>
+
+            <script>
+            var trace1 = {
+                x: [1, 2, 3, 4],
+                y: [10, 20, 15, 30],
+                type: "scatter",
+                mode: "lines+markers",
+                name: "Plot 1",
+            };
+            var trace2 = {
+                x: [1, 2, 3, 4],
+                y: [20, 15, 17, 30],
+                type: "bar",
+                mode: "lines+markers",
+                name: "Plot 2",
+            };
+            var trace3 = {
+                labels: ["Microsoft Access", "Oracle", "MariaDB", "mySQL"],
+                values: [10, 20, 30, 40],
+                type: "pie",
+                name: "Plot 3",
+            };
+
+            var layout = {
+                title: "Grafik",
+                showlegend: true,
+            };
+
+            Plotly.newPlot("plot1", [trace1], layout);
+            Plotly.newPlot("plot2", [trace2], layout);
+            Plotly.newPlot("plot3", [trace3], layout);
+            </script>
+    </main>
+
+    <!--tag Footer -->
+    <footer>
+        <div class="pull-right hidden-xs">
+          </div>
+          <strong>Copyright &copy; 2024 <a href="http://almsaeedstudio.com">Natuliantari_21111016</a>.</strong> All rights
+          reserved.
+    </footer>
+</body>
+</html>
